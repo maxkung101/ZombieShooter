@@ -16,7 +16,7 @@ public class Stone : MonoBehaviour
     private void Start()
     {
         clones = new List<GameObject>();
-        timeToAappear = 20;
+        timeToAappear = 30;
         appearTimer = Random.Range(0, timeToAappear);
     }
 

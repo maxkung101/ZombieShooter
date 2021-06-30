@@ -8,7 +8,7 @@ public class Zombie : Objects
     public CharacterController controller;
     public float speed;
     public Transform player;
-    public AudioSource attackingSound;
+    public AudioSource attackingSound, deathSound;
 
     private Animator anim;
     private AudioSource source;
@@ -84,6 +84,7 @@ public class Zombie : Objects
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
+            deathSound.Play();
         }
     }
 
