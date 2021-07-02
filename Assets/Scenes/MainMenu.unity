@@ -1473,9 +1473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'VR Zombie Shooter
-
-    Defender'
+  m_text: Z Shot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 752eedb2927ab5644b15521b063dc33d, type: 2}
   m_sharedMaterial: {fileID: -1605937128624286482, guid: 752eedb2927ab5644b15521b063dc33d,
@@ -1503,7 +1501,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.1
+  m_fontSize: 22.4
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
