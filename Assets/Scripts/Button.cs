@@ -7,6 +7,7 @@ public class Button : Objects
 {
     public UnityEvent GVRClick;
 
+    // Use this for initialization
     public override void Init()
     {
 

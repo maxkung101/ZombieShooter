@@ -16,13 +16,13 @@ public class Zombie : Objects
     private Vector3 velocity;
     private float totalTime, attackTimer, timeToDisappear, disappearTimer;
 
+    // Use this for initialization
     public override void Init()
     {
         anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
         zombieIsAlive = true;
         zombieIsAttacking = false;
-        transform.LookAt(player);
         totalTime = 2;
         attackTimer = 0;
         timeToDisappear = 10;
@@ -31,6 +31,7 @@ public class Zombie : Objects
 
     public override void ObjectMove()
     {
+        transform.LookAt(player);
         velocity = speed * transform.forward * Time.deltaTime;
         if (zombieIsAttacking)
         {

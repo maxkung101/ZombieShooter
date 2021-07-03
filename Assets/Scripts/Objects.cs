@@ -19,6 +19,7 @@ public abstract class Objects : MonoBehaviour
         Init();
     }
 
+    // Update is called once per frame
     protected void Update()
     {
         volume = MicInput.MicLoudness;
