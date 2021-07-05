@@ -7,7 +7,7 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public GameObject[] themeList, mainUI, confirmUI;
-    public GameObject cycleLeft, cycleRight;
+    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn;
     public TMP_Text record;
 
     private int index, highScore;
@@ -17,6 +17,8 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        yesBtn.GetComponent<BoxCollider>().enabled = false;
+        noBtn.GetComponent<BoxCollider>().enabled = false;
         pauseTimer = 0;
         pauseTimer2 = 0;
         endPause = 1;
@@ -163,42 +165,43 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void ExitGame()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
     private void MainToggleOn()
     {
+        foreach (GameObject go in confirmUI)
+        {
+            go.SetActive(false);
+        }
         foreach (GameObject go in mainUI)
         {
             go.SetActive(true);
         }
+        resetBtn.GetComponent<BoxCollider>().enabled = true;
     }
 
     public void MainToggleOff()
     {
-        foreach (GameObject go in mainUI)
-        {
-            go.SetActive(false);
-        }
         timeToConfirm = true;
+        resetBtn.GetComponent<BoxCollider>().enabled = false;
     }
 
     private void ConfirmToggleOn()
     {
+        foreach (GameObject go in mainUI)
+        {
+            go.SetActive(false);
+        }
         foreach (GameObject go in confirmUI)
         {
             go.SetActive(true);
         }
+        yesBtn.GetComponent<BoxCollider>().enabled = true;
+        noBtn.GetComponent<BoxCollider>().enabled = true;
     }
 
     public void ConfirmToggleOff()
     {
-        foreach (GameObject go in confirmUI)
-        {
-            go.SetActive(false);
-        }
         timeToMain = true;
+        yesBtn.GetComponent<BoxCollider>().enabled = false;
+        noBtn.GetComponent<BoxCollider>().enabled = false;
     }
 }

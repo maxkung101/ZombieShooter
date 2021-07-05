@@ -16,12 +16,6 @@ public class GameOver : MonoBehaviour
         numPoints.text = score.ToString();
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
     public void ResetScore()
     {
         PlayerPrefs.SetInt("VR Zombie Shooter Defender - FinalScore", 0);
