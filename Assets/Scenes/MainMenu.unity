@@ -2057,7 +2057,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635438259}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ToggleRight
+        m_MethodName: HitRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3432,6 +3432,8 @@ MonoBehaviour:
   - {fileID: 1738149129}
   - {fileID: 2055328647}
   - {fileID: 2095045718}
+  cycleLeft: {fileID: 1897399070}
+  cycleRight: {fileID: 1124434363}
   record: {fileID: 1538950573}
 --- !u!1 &1664326096
 GameObject:
@@ -4154,7 +4156,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635438259}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ToggleLeft
+        m_MethodName: HitLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4402,18 +4404,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1635438259}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: MainToggleOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2095045718
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,18 +4517,6 @@ MonoBehaviour:
   GVRClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635438259}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: MainToggleOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1635438259}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ConfirmToggleOff
@@ -4663,18 +4641,6 @@ MonoBehaviour:
   GVRClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635438259}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ConfirmToggleOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1635438259}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MainToggleOff

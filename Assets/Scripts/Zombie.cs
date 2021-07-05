@@ -56,10 +56,13 @@ public class Zombie : Objects
 
         if (!zombieIsAlive)
         {
-            disappearTimer += Time.deltaTime;
             if (disappearTimer > timeToDisappear)
             {
                 Destroy(gameObject);
+            }
+            else
+            {
+                disappearTimer += Time.deltaTime;
             }
         }
     }

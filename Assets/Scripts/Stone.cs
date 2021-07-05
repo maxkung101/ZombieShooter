@@ -23,7 +23,6 @@ public class Stone : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        appearTimer += Time.deltaTime;
         if (appearTimer > timeToAappear)
         {
             appearTimer = 0;
@@ -31,6 +30,10 @@ public class Stone : MonoBehaviour
             zombie = zombies[num];
             clones.Add(Instantiate(zombie, transform.position, Quaternion.identity) as GameObject);
             clones[clones.Count - 1].GetComponent<Zombie>().player = player;
+        }
+        else
+        {
+            appearTimer += Time.deltaTime;
         }
     }
 }
