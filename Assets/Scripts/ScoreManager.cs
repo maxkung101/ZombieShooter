@@ -9,7 +9,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance { get; set; } // static singleton
     public TMP_Text numPoints, health;
 
-    private int score, life, highScore;
+    private int score, life, highScore, musicIsOn;
+    private AudioSource source;
 
     private void Awake()
     {
@@ -26,17 +27,17 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         score = 0;
         highScore = PlayerPrefs.GetInt("VR Zombie Shooter Defender - HighScore", 0);
         life = 100;
         numPoints.text = score.ToString();
         health.text = life.ToString();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
+        musicIsOn = PlayerPrefs.GetInt("VR Zombie Shooter Defender - Music", 0);
+        if (musicIsOn != 0)
+        {
+            source.Play();
+        }
     }
 
     public int GetScore()

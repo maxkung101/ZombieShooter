@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject[] themeList, mainUI, confirmUI;
-    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn;
-    public TMP_Text record;
+    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn;
+    public TMP_Text record, musicStatus;
 
-    private int index, highScore;
-    private float pauseTimer, pauseTimer2, endPause, endPause2;
-    private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight;
+    private int index, highScore, musicIsOn;
+    private float pauseTimer, pauseTimer2, pauseTimer3, endPause, endPause2;
+    private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight, musicActivation;
 
     // Start is called before the first frame update
     private void Start()
@@ -21,12 +20,14 @@ public class MainMenu : MonoBehaviour
         noBtn.GetComponent<BoxCollider>().enabled = false;
         pauseTimer = 0;
         pauseTimer2 = 0;
+        pauseTimer3 = 0;
         endPause = 1;
         endPause2 = 0.5f;
         timeToConfirm = false;
         timeToMain = false;
         cyclingLeft = false;
         cyclingRight = false;
+        musicActivation = false;
         ConfirmToggleOff();
         // We toggle off their renderer.
         foreach (GameObject go in themeList)
@@ -41,11 +42,23 @@ public class MainMenu : MonoBehaviour
         // We toggle on the high score.
         highScore = PlayerPrefs.GetInt("VR Zombie Shooter Defender - HighScore", 0);
         record.text = highScore.ToString();
+
+        // We toggle on the in game music.
+        musicIsOn = PlayerPrefs.GetInt("VR Zombie Shooter Defender - Music", 0);
+        if (musicIsOn == 0)
+        {
+            musicStatus.text = "Off";
+        }
+        else
+        {
+            musicStatus.text = "On";
+        }
     }
 
     // Update is called once per frame
     private void Update()
     {
+        // Turn on the confirm GUI.
         if (timeToConfirm)
         {
             if (pauseTimer >= endPause)
@@ -60,6 +73,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
+        // Turn off the confirm GUI.
         if (timeToMain)
         {
             if (pauseTimer >= endPause)
@@ -74,6 +88,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
+        // Cycle theme left
         if (cyclingLeft)
         {
             if (pauseTimer2 >= endPause2)
@@ -90,6 +105,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
+        // Cycle theme right
         if (cyclingRight)
         {
             if (pauseTimer2 >= endPause2)
@@ -104,6 +120,44 @@ public class MainMenu : MonoBehaviour
             {
                 pauseTimer2 += Time.deltaTime;
             }
+        }
+
+        // Toggle in-game music
+        if (musicActivation)
+        {
+            if (pauseTimer3 >= endPause2)
+            {
+                musicActivation = false;
+                pauseTimer3 = 0;
+                ToggleMusic();
+                musicBtn.GetComponent<BoxCollider>().enabled = true;
+            }
+            else
+            {
+                pauseTimer3 += Time.deltaTime;
+            }
+        }
+    }
+
+    public void HitMusic()
+    {
+        musicBtn.GetComponent<BoxCollider>().enabled = false;
+        musicActivation = true;
+    }
+
+    private void ToggleMusic()
+    {
+        if (musicIsOn == 0)
+        {
+            PlayerPrefs.SetInt("VR Zombie Shooter Defender - Music", 1);
+            musicIsOn = 1;
+            musicStatus.text = "On";
+        }
+        else
+        {
+            PlayerPrefs.SetInt("VR Zombie Shooter Defender - Music", 0);
+            musicIsOn = 0;
+            musicStatus.text = "Off";
         }
     }
 
@@ -158,11 +212,6 @@ public class MainMenu : MonoBehaviour
         highScore = 0;
         PlayerPrefs.SetInt("VR Zombie Shooter Defender - HighScore", highScore);
         record.text = highScore.ToString();
-    }
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("SampleScene");
     }
 
     private void MainToggleOn()
