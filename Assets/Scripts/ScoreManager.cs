@@ -65,6 +65,7 @@ public class ScoreManager : MonoBehaviour
             if (score > highScore)
             {
                 PlayerPrefs.SetInt("VR Zombie Shooter Defender - HighScore", score);
+                PlayerPrefs.SetInt("VR Zombie Shooter Defender - IsNewScore", 1);
             }
             SceneManager.LoadScene("GameOver");
         }

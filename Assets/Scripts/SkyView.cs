@@ -50,10 +50,4 @@ public class SkyView : MonoBehaviour
                 break;
         }
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
 }
