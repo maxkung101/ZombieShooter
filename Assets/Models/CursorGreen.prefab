@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6739153675413669733}
   m_Layer: 0
-  m_Name: Cursor
+  m_Name: CursorGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,18 +6,20 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public GameObject[] themeList, mainUI, confirmUI;
-    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn;
+    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn, pointerGUI, pointerBtn, pointerBackBtn, languageGUI, languageBtn, languageBackBtn;
     public TMP_Text record, musicStatus;
 
     private int index, highScore, musicIsOn;
     private float pauseTimer, pauseTimer2, pauseTimer3, endPause, endPause2;
-    private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight, musicActivation;
+    private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight, musicActivation, timeToPointer, timeFromPointer, timeToLanguage, timeFromLanguage;
 
     // Start is called before the first frame update
     private void Start()
     {
         yesBtn.GetComponent<BoxCollider>().enabled = false;
         noBtn.GetComponent<BoxCollider>().enabled = false;
+        pointerBackBtn.GetComponent<BoxCollider>().enabled = false;
+        languageBackBtn.GetComponent<BoxCollider>().enabled = false;
         pauseTimer = 0;
         pauseTimer2 = 0;
         pauseTimer3 = 0;
@@ -28,6 +30,10 @@ public class MainMenu : MonoBehaviour
         cyclingLeft = false;
         cyclingRight = false;
         musicActivation = false;
+        timeToPointer = false;
+        timeFromPointer = false;
+        timeToLanguage = false;
+        timeFromLanguage = false;
         ConfirmToggleOff();
         // We toggle off their renderer.
         foreach (GameObject go in themeList)
@@ -81,6 +87,66 @@ public class MainMenu : MonoBehaviour
                 timeToMain = false;
                 pauseTimer = 0;
                 MainToggleOn();
+            }
+            else
+            {
+                pauseTimer += Time.deltaTime;
+            }
+        }
+
+        // Turn on the pointer GUI.
+        if (timeToPointer)
+        {
+            if (pauseTimer >= endPause)
+            {
+                timeToPointer = false;
+                pauseTimer = 0;
+                PointerToggleOn();
+            }
+            else
+            {
+                pauseTimer += Time.deltaTime;
+            }
+        }
+
+        // Turn off the pointer GUI.
+        if (timeFromPointer)
+        {
+            if (pauseTimer >= endPause)
+            {
+                timeFromPointer = false;
+                pauseTimer = 0;
+                MainToggleOn2();
+            }
+            else
+            {
+                pauseTimer += Time.deltaTime;
+            }
+        }
+
+        // Turn on the language GUI.
+        if (timeToLanguage)
+        {
+            if (pauseTimer >= endPause)
+            {
+                timeToLanguage = false;
+                pauseTimer = 0;
+                LanguageToggleOn();
+            }
+            else
+            {
+                pauseTimer += Time.deltaTime;
+            }
+        }
+
+        // Turn off the language GUI.
+        if (timeFromLanguage)
+        {
+            if (pauseTimer >= endPause)
+            {
+                timeFromLanguage = false;
+                pauseTimer = 0;
+                MainToggleOn3();
             }
             else
             {
@@ -252,5 +318,69 @@ public class MainMenu : MonoBehaviour
         timeToMain = true;
         yesBtn.GetComponent<BoxCollider>().enabled = false;
         noBtn.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void MainToggleOn2()
+    {
+        pointerGUI.SetActive(false);
+        foreach (GameObject go in mainUI)
+        {
+            go.SetActive(true);
+        }
+        pointerBtn.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void MainToggleOff2()
+    {
+        timeToPointer = true;
+        pointerBtn.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void PointerToggleOn()
+    {
+        foreach (GameObject go in mainUI)
+        {
+            go.SetActive(false);
+        }
+        pointerGUI.SetActive(true);
+        pointerBackBtn.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void PointerToggleOff()
+    {
+        timeFromPointer = true;
+        pointerBackBtn.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void MainToggleOn3()
+    {
+        languageGUI.SetActive(false);
+        foreach (GameObject go in mainUI)
+        {
+            go.SetActive(true);
+        }
+        languageBtn.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void MainToggleOff3()
+    {
+        timeToLanguage = true;
+        languageBtn.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void LanguageToggleOn()
+    {
+        foreach (GameObject go in mainUI)
+        {
+            go.SetActive(false);
+        }
+        languageGUI.SetActive(true);
+        languageBackBtn.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void LanguageToggleOff()
+    {
+        timeFromLanguage = true;
+        languageBackBtn.GetComponent<BoxCollider>().enabled = false;
     }
 }
