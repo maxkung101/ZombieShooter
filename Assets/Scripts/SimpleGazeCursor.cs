@@ -4,18 +4,43 @@ using System;
 
 public class SimpleGazeCursor : MonoBehaviour {
     public Camera viewCamera;
-    public GameObject cursorPrefab;
+    public GameObject c_Default, c_Red, c_Blue, c_Orange, c_Yellow, c_Purple, c_Green;
     public float maxCursorDistance = 30;
 
     private GameObject cursorInstance;
+    private int x;
 
-	// Use this for initialization
-	void Start () {
-        cursorInstance = Instantiate(cursorPrefab);
+    // Use this for initialization
+    private void Start () {
+        x = PlayerPrefs.GetInt("VR Zombie Shooter Defender - SelectedColor", 0);
+        switch (x)
+        {
+            case 1:
+                cursorInstance = Instantiate(c_Red);
+                break;
+            case 2:
+                cursorInstance = Instantiate(c_Blue);
+                break;
+            case 3:
+                cursorInstance = Instantiate(c_Orange);
+                break;
+            case 4:
+                cursorInstance = Instantiate(c_Yellow);
+                break;
+            case 5:
+                cursorInstance = Instantiate(c_Purple);
+                break;
+            case 6:
+                cursorInstance = Instantiate(c_Green);
+                break;
+            default:
+                cursorInstance = Instantiate(c_Default);
+                break;
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    private void Update () {
         UpdateCursor();
 	}
 

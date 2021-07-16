@@ -6,7 +6,7 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public GameObject[] themeList, mainUI, confirmUI;
-    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn, pointerGUI, pointerBtn, pointerBackBtn, languageGUI, languageBtn, languageBackBtn;
+    public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn, pointerGUI, pointerBtn, pointerBackBtn, languageGUI, languageBtn, languageBackBtn, canvas;
     public TMP_Text record, musicStatus;
 
     private int index, highScore, musicIsOn;
@@ -323,6 +323,7 @@ public class MainMenu : MonoBehaviour
     private void MainToggleOn2()
     {
         pointerGUI.SetActive(false);
+        canvas.SetActive(false);
         foreach (GameObject go in mainUI)
         {
             go.SetActive(true);
@@ -343,6 +344,7 @@ public class MainMenu : MonoBehaviour
             go.SetActive(false);
         }
         pointerGUI.SetActive(true);
+        canvas.SetActive(true);
         pointerBackBtn.GetComponent<BoxCollider>().enabled = true;
     }
 
