@@ -9,15 +9,11 @@ public class TextBehaviourMenu : MonoBehaviour
     [TextArea]
     public string[] instructions, credits;
 
+    private int id;
+
     // Start is called before the first frame update
     private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
+        id = PlayerPrefs.GetInt("VR Zombie Shooter Defender - SelectedLanguage", 0);
     }
 }
