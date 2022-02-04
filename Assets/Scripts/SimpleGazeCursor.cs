@@ -6,6 +6,7 @@ public class SimpleGazeCursor : MonoBehaviour {
     public Camera viewCamera;
     public GameObject c_Default, c_Red, c_Blue, c_Orange, c_Yellow, c_Purple, c_Green;
     public float maxCursorDistance = 30;
+    public AudioSource eSystem;
 
     private GameObject cursorInstance;
     private int x;
@@ -16,25 +17,25 @@ public class SimpleGazeCursor : MonoBehaviour {
         switch (x)
         {
             case 1:
-                cursorInstance = Instantiate(c_Red);
+                cursorInstance = Instantiate(c_Red) as GameObject;
                 break;
             case 2:
-                cursorInstance = Instantiate(c_Blue);
+                cursorInstance = Instantiate(c_Blue) as GameObject;
                 break;
             case 3:
-                cursorInstance = Instantiate(c_Orange);
+                cursorInstance = Instantiate(c_Orange) as GameObject;
                 break;
             case 4:
-                cursorInstance = Instantiate(c_Yellow);
+                cursorInstance = Instantiate(c_Yellow) as GameObject;
                 break;
             case 5:
-                cursorInstance = Instantiate(c_Purple);
+                cursorInstance = Instantiate(c_Purple) as GameObject;
                 break;
             case 6:
-                cursorInstance = Instantiate(c_Green);
+                cursorInstance = Instantiate(c_Green) as GameObject;
                 break;
             default:
-                cursorInstance = Instantiate(c_Default);
+                cursorInstance = Instantiate(c_Default) as GameObject;
                 break;
         }
 	}

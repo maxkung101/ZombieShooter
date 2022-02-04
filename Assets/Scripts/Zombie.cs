@@ -29,6 +29,16 @@ public class Zombie : Objects
         disappearTimer = 0;
     }
 
+    public override void LookAtIt()
+    {
+        
+    }
+
+    public override void StopLooking()
+    {
+        
+    }
+
     public override void ObjectMove()
     {
         transform.LookAt(player);

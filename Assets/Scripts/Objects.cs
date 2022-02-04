@@ -49,6 +49,7 @@ public abstract class Objects : MonoBehaviour
     // This method is called by the Main Camera when it starts gazing at this GameObject.
     protected void OnPointerEnter()
     {
+        LookAtIt();
         if (isEnabled)
         {
             gvrStatus = true;
@@ -58,6 +59,7 @@ public abstract class Objects : MonoBehaviour
     // This method is called by the Main Camera when it stops gazing at this GameObject.
     protected void OnPointerExit()
     {
+        StopLooking();
         if (isEnabled)
         {
             gvrStatus = false;
@@ -72,4 +74,6 @@ public abstract class Objects : MonoBehaviour
     public abstract void Init();
     public abstract void ObjectEvent();
     public abstract void ObjectMove();
+    public abstract void LookAtIt();
+    public abstract void StopLooking();
 }
