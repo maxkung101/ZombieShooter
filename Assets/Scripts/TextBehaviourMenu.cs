@@ -5,12 +5,12 @@ using TMPro;
 
 public class TextBehaviourMenu : MonoBehaviour
 {
-    public string[] lookAround, details, highScore, settings, theme, inGameMusic, pointer, language, resetScore, on, off, dawn, day, sunset, night, auto, play;
+    public string[] lookAround, details, highScore, settings, theme, inGameMusic, pointer, language, resetScore, dawn, day, sunset, night, auto, play, back, resetScore2, yes, no;
 
     [TextArea]
     public string[] instructions, credits;
 
-    public TMP_Text lookAroundTMP, detailsTMP, highScoreTMP, settingsTMP, themeTMP, inGameMusicTMP, pointerTMP, languageTMP, resetScoreTMP, dawnTMP, dayTMP, sunsetTMP, nightTMP, autoTMP, playTMP;
+    public TMP_Text lookAroundTMP, detailsTMP, highScoreTMP, settingsTMP, themeTMP, inGameMusicTMP, pointerTMP, languageTMP, resetScoreTMP, dawnTMP, dayTMP, sunsetTMP, nightTMP, autoTMP, playTMP, backTMP, back2TMP, resetScore2TMP, yesTMP, noTMP;
 
     private int id;
 
@@ -34,5 +34,10 @@ public class TextBehaviourMenu : MonoBehaviour
         nightTMP.text = night[id];
         autoTMP.text = auto[id];
         playTMP.text = play[id];
+        backTMP.text = back[id];
+        back2TMP.text = back[id];
+        resetScore2TMP.text = resetScore2[id];
+        yesTMP.text = yes[id];
+        noTMP.text = no[id];
     }
 }

@@ -7,15 +7,21 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject[] themeList, mainUI, confirmUI;
     public GameObject cycleLeft, cycleRight, resetBtn, yesBtn, noBtn, musicBtn, pointerGUI, pointerBtn, pointerBackBtn, languageGUI, languageBtn, languageBackBtn, canvas;
-    public TMP_Text record, musicStatus;
+    public TMP_Text record, musicStatus, canvasText;
+    public string[] on_txt, off_txt, canvasPoint_txt, canvasLang_txt;
 
-    private int index, highScore, musicIsOn;
+    private int index, highScore, musicIsOn, id;
     private float pauseTimer, pauseTimer2, pauseTimer3, endPause, endPause2;
     private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight, musicActivation, timeToPointer, timeFromPointer, timeToLanguage, timeFromLanguage;
+    private string onText, offText;
 
     // Start is called before the first frame update
     private void Start()
     {
+        id = PlayerPrefs.GetInt("VR Zombie Shooter Defender - SelectedLanguage", 0);
+        onText = on_txt[id];
+        offText = off_txt[id];
+
         yesBtn.GetComponent<BoxCollider>().enabled = false;
         noBtn.GetComponent<BoxCollider>().enabled = false;
         pointerBackBtn.GetComponent<BoxCollider>().enabled = false;
@@ -53,11 +59,11 @@ public class MainMenu : MonoBehaviour
         musicIsOn = PlayerPrefs.GetInt("VR Zombie Shooter Defender - Music", 0);
         if (musicIsOn == 0)
         {
-            musicStatus.text = "Off";
+            musicStatus.text = offText;
         }
         else
         {
-            musicStatus.text = "On";
+            musicStatus.text = onText;
         }
     }
 
@@ -217,13 +223,13 @@ public class MainMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt("VR Zombie Shooter Defender - Music", 1);
             musicIsOn = 1;
-            musicStatus.text = "On";
+            musicStatus.text = onText;
         }
         else
         {
             PlayerPrefs.SetInt("VR Zombie Shooter Defender - Music", 0);
             musicIsOn = 0;
-            musicStatus.text = "Off";
+            musicStatus.text = offText;
         }
     }
 
@@ -344,6 +350,7 @@ public class MainMenu : MonoBehaviour
             go.SetActive(false);
         }
         pointerGUI.SetActive(true);
+        canvasText.text = canvasPoint_txt[id];
         canvas.SetActive(true);
         pointerBackBtn.GetComponent<BoxCollider>().enabled = true;
     }
@@ -357,6 +364,7 @@ public class MainMenu : MonoBehaviour
     private void MainToggleOn3()
     {
         languageGUI.SetActive(false);
+        canvas.SetActive(false);
         foreach (GameObject go in mainUI)
         {
             go.SetActive(true);
@@ -377,6 +385,8 @@ public class MainMenu : MonoBehaviour
             go.SetActive(false);
         }
         languageGUI.SetActive(true);
+        canvasText.text = canvasLang_txt[id];
+        canvas.SetActive(true);
         languageBackBtn.GetComponent<BoxCollider>().enabled = true;
     }
 
