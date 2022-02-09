@@ -2033,7 +2033,7 @@ GameObject:
   - component: {fileID: 1996920418}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2175,13 +2175,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewCamera: {fileID: 1406512472}
-  c_Default: {fileID: 0}
-  c_Red: {fileID: 0}
-  c_Blue: {fileID: 0}
-  c_Orange: {fileID: 0}
-  c_Yellow: {fileID: 0}
-  c_Purple: {fileID: 0}
-  c_Green: {fileID: 0}
+  c_Default: {fileID: 2721868693716264185, guid: fbbf5a5c7386ac9478c873faccb85095,
+    type: 3}
+  c_Red: {fileID: 137777192309046976, guid: 19c41721dac3ded4db4ca05dc8d1747d, type: 3}
+  c_Blue: {fileID: 8952530758968852753, guid: e7e90a8a9be35864ca52bd7e24d2de2e, type: 3}
+  c_Orange: {fileID: 5656107677334899200, guid: f9dbc4b39d55ea14db4657d84f75eefc,
+    type: 3}
+  c_Yellow: {fileID: 3937415792794418404, guid: 5afe3fea63e4bb44f8c0cd000930dcc7,
+    type: 3}
+  c_Purple: {fileID: 60380553941454383, guid: 9afceeba046e9104fb3989dbbd8ec48e, type: 3}
+  c_Green: {fileID: 6739153675413669734, guid: 421c77bffa04b1142962f1af662fe37e, type: 3}
   maxCursorDistance: 10
   eSystem: {fileID: 652767525}
 --- !u!1 &1997977113

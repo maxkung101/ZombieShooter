@@ -15,6 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: fc71b5a6f42f50d438ab20664c2c3e72
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 66489cabf21ec2c43a0bf847ee439736,
+      type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: ce83d511daf30b84e96115f2c22150ff,
       type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: df5d7d96d618dc4458aeecffb0c62a21,
@@ -22,4 +24,6 @@ EditorBuildSettings:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 049e3133e42f10c4a8eb0b4134913e69,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 082bf960e49656f44ad8a671685b8a70,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 7cf27fbf8ff90dc4792d999e0fae6f74,
       type: 2}
