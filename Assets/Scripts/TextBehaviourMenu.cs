@@ -8,9 +8,9 @@ public class TextBehaviourMenu : MonoBehaviour
     public string[] lookAround, details, highScore, settings, theme, inGameMusic, pointer, language, resetScore, dawn, day, sunset, night, auto, play, back, resetScore2, yes, no;
 
     [TextArea]
-    public string[] instructions, credits;
+    public string[] instructions, credits, story;
 
-    public TMP_Text lookAroundTMP, detailsTMP, highScoreTMP, settingsTMP, themeTMP, inGameMusicTMP, pointerTMP, languageTMP, resetScoreTMP, dawnTMP, dayTMP, sunsetTMP, nightTMP, autoTMP, playTMP, backTMP, back2TMP, resetScore2TMP, yesTMP, noTMP;
+    public TMP_Text lookAroundTMP, detailsTMP, highScoreTMP, settingsTMP, themeTMP, inGameMusicTMP, pointerTMP, languageTMP, resetScoreTMP, dawnTMP, dayTMP, sunsetTMP, nightTMP, autoTMP, playTMP, backTMP, back2TMP, resetScore2TMP, yesTMP, noTMP, storyTMP;
 
     private int id;
 
@@ -39,5 +39,6 @@ public class TextBehaviourMenu : MonoBehaviour
         resetScore2TMP.text = resetScore2[id];
         yesTMP.text = yes[id];
         noTMP.text = no[id];
+        storyTMP.text = story[id];
     }
 }
