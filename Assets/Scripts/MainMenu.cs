@@ -15,6 +15,12 @@ public class MainMenu : MonoBehaviour
     private bool timeToConfirm, timeToMain, cyclingLeft, cyclingRight, musicActivation, timeToPointer, timeFromPointer, timeToLanguage, timeFromLanguage;
     private string onText, offText;
 
+    // Use this for initialization
+    private void Awake()
+    {
+        Application.targetFrameRate = 10;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
