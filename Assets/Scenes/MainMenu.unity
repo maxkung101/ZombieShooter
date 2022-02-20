@@ -8076,6 +8076,8 @@ MonoBehaviour:
   yesTMP: {fileID: 324861302}
   noTMP: {fileID: 169528073}
   storyTMP: {fileID: 1394544467}
+  instructionsTMP: {fileID: 187325701}
+  descriptionTMP: {fileID: 1686182795}
 --- !u!1 &1664326096
 GameObject:
   m_ObjectHideFlags: 0
