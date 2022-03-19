@@ -240,6 +240,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -8228756703502313438, guid: 082bf960e49656f44ad8a671685b8a70, type: 2}
   - {fileID: 0}
   - {fileID: 6560828279007326955, guid: 049e3133e42f10c4a8eb0b4134913e69, type: 2}
@@ -261,7 +262,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.MaxKung.ZShot
-    Standalone: com.MaxKung.ZShot
+    Standalone: com.Max-Kung.ZShot
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -676,8 +677,8 @@ PlayerSettings:
     m_APIs: 0b000000
     m_Automatic: 1
   - m_BuildTarget: WindowsStandaloneSupport
-    m_APIs: 1200000002000000
-    m_Automatic: 1
+    m_APIs: 02000000
+    m_Automatic: 0
   - m_BuildTarget: MacStandaloneSupport
     m_APIs: 10000000
     m_Automatic: 1
