@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.johnleevr.exe",
+      "app_key": "application.generated.unity.zombieshooter.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Maximilian\\JohnLeeVR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Maximilian\\ZombieShooter\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "JohnLeeVR [Testing]"
+          "name": "ZombieShooter [Testing]"
         }
       }
     }
