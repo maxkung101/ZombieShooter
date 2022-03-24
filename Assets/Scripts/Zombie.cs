@@ -9,12 +9,15 @@ public class Zombie : Objects
     public float speed;
     public Transform player;
     public AudioSource attackingSound, deathSound;
+    public GameObject[] blood;
 
     private Animator anim;
     private AudioSource source;
     private bool zombieIsAlive, zombieIsAttacking;
     private Vector3 velocity;
     private float totalTime, attackTimer, timeToDisappear, disappearTimer;
+    private int num;
+    private GameObject wound;
 
     // Use this for initialization
     public override void Init()
@@ -27,6 +30,7 @@ public class Zombie : Objects
         attackTimer = 0;
         timeToDisappear = 10;
         disappearTimer = 0;
+        num = Random.Range(0, blood.Length);
     }
 
     public override void LookAtIt()
@@ -99,6 +103,8 @@ public class Zombie : Objects
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
             deathSound.Play();
+            wound = Instantiate(blood[num], transform.position, Quaternion.identity) as GameObject;
+            wound.transform.parent = transform;
         }
     }
 
