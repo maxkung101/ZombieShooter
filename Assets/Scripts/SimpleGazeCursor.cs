@@ -45,9 +45,7 @@ public class SimpleGazeCursor : MonoBehaviour {
         UpdateCursor();
 	}
 
-    /// <summary>
-    /// Updates the cursor based on what the camera is pointed at.
-    /// </summary>
+    // Updates the cursor based on what the camera is pointed at.
     private void UpdateCursor()
     {
         // Create a gaze ray pointing forward from the camera
