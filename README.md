@@ -14,4 +14,4 @@ Features
 
 Requirements
 ------------
-- SteamVR
+- OpenXR
