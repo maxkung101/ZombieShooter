@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Max Kung
-  productName: ZShot
+  productName: Z Shot
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -139,6 +139,8 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1004,19 +1006,19 @@ PlayerSettings:
   metroCertificateNotAfter: 80587d28f065d901
   metroApplicationDescription: Template_3D
   wsaImages:
-    65636: Assets/Sprites/StoreLogo.png
-    131172: Assets/Sprites/SplashScreen.scale-100.png
-    131197: Assets/Sprites/SplashScreen.scale-125.png
-    131222: Assets/Sprites/SplashScreen.scale-150.png
-    131272: Assets/Sprites/SplashScreen.scale-200.png
-    131472: Assets/Sprites/SplashScreen.scale-400.png
-    2031640: Assets/Sprites/Square44x44Logo.targetsize-24.png
-    2031816: Assets/Sprites/Square44x44Logo.scale-200.png
-    2097352: Assets/Sprites/Square71x71Logo.scale-200.png
-    2162788: Assets/Sprites/Square150x150Logo.scale-100.png
-    2162888: Assets/Sprites/Square150x150Logo.scale-200.png
-    2293860: Assets/Sprites/Wide310x150Logo.scale-100.png
-    2293960: Assets/Sprites/Wide310x150Logo.scale-200.png
+    65636: Assets/Art/Sprites/StoreLogo.png
+    131172: Assets/Art/Sprites/SplashScreen.scale-100.png
+    131197: Assets/Art/Sprites/SplashScreen.scale-125.png
+    131222: Assets/Art/Sprites/SplashScreen.scale-150.png
+    131272: Assets/Art/Sprites/SplashScreen.scale-200.png
+    131472: Assets/Art/Sprites/SplashScreen.scale-400.png
+    2031640: Assets/Art/Sprites/Square44x44Logo.targetsize-24.png
+    2031816: Assets/Art/Sprites/Square44x44Logo.scale-200.png
+    2097352: Assets/Art/Sprites/Square71x71Logo.scale-200.png
+    2162788: Assets/Art/Sprites/Square150x150Logo.scale-100.png
+    2162888: Assets/Art/Sprites/Square150x150Logo.scale-200.png
+    2293860: Assets/Art/Sprites/Wide310x150Logo.scale-100.png
+    2293960: Assets/Art/Sprites/Wide310x150Logo.scale-200.png
   metroTileShortName: Z Shot
   metroTileShowName: 0
   metroMediumTileShowName: 0
