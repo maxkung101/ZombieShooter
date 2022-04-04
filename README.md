@@ -1,4 +1,4 @@
-# Z Shot
+![Z Shot](Assets/Art/Sprites/SplashScreen.scale-100.png?raw=true "Z Shot")
 
 A virtual reality zombie shooter defender game
 
