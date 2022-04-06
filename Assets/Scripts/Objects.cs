@@ -23,7 +23,7 @@ public abstract class Objects : MonoBehaviour
     protected void Update()
     {
         volume = MicInput.MicLoudness;
-        if (volume >= 0.01f)
+        if (volume >= 0.05f)
         {
             ObjectEvent();
         }
