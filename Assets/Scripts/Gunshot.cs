@@ -20,7 +20,7 @@ public class Gunshot : MonoBehaviour
     private void Update()
     {
         volume = MicInput.MicLoudness;
-        if (volume >= 0.01)
+        if (volume >= 0.01f)
         {
             eSystem.Play();
         }
