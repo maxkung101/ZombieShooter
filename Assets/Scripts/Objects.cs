@@ -66,11 +66,6 @@ public abstract class Objects : MonoBehaviour
         }
     }
 
-    protected void OnApplicationQuit()
-    {
-        
-    }
-
     public abstract void Init();
     public abstract void ObjectEvent();
     public abstract void ObjectMove();
