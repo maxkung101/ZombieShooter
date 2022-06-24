@@ -7,7 +7,7 @@ public class TextBehaviourMenu : MonoBehaviour
 {
     public string[] lookAround, details, highScore, settings, theme, inGameMusic, pointer, language, resetScore, dawn, day, sunset, night, auto, play, back, resetScore2, yes, no;
 
-    [TextArea]
+    [TextArea(10, 15)]
     public string[] instructions, credits, story;
 
     public TMP_Text lookAroundTMP, detailsTMP, highScoreTMP, settingsTMP, themeTMP, inGameMusicTMP, pointerTMP, languageTMP, resetScoreTMP, dawnTMP, dayTMP, sunsetTMP, nightTMP, autoTMP, playTMP, backTMP, back2TMP, resetScore2TMP, yesTMP, noTMP, storyTMP, instructionsTMP, descriptionTMP;

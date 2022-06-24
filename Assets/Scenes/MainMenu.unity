@@ -8202,7 +8202,7 @@ MonoBehaviour:
   - "\u91CD\u7F6E\u5206\u6570"
   - "\u91CD\u7F6E\u5206\u6578"
   dawn:
-  - Dawn
+  - Sunrise
   - "\u9ECE\u660E"
   - "\u9ECE\u660E"
   day:
@@ -8250,11 +8250,15 @@ MonoBehaviour:
   - 'Created by Max Kung
 
     Music and sounds are from YouTube Audio library and
-    Unity Asset Store'
+    Unity Asset Store
+
+    Zombie models and animations are from Mixamo'
   - "\u7531 Max Kung \u5236\u4F5C\n\u97F3\u4E50\u548C\u58F0\u97F3\u662F\u4ECE YouTube
-    Audio library \u548C Unity Asset Store"
+    Audio library \u548C Unity Asset Store\n\u50F5\u5C38\u6A21\u578B\u548C\u52A8\u753B\u6765\u81EA
+    Mixamo"
   - "\u7531 Max Kung \u88FD\u4F5C\n\u97F3\u6A02\u548C\u8072\u97F3\u662F\u5F9E YouTube
-    Audio library \u548C Unity Asset Store"
+    Audio library \u548C Unity Asset Store\n\u6BAD\u5C4D\u6A21\u578B\u548C\u52D5\u756B\u4F86\u81EA
+    Mixamo"
   story:
   - 'You are the only survivor of a zombie virus outbreak and you only have one weapon:
     the cardboard blaster. Will you be able to use it to survive?'
